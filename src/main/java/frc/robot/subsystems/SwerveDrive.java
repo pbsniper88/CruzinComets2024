@@ -55,13 +55,18 @@ public class SwerveDrive {
         frontRightAngle = (Math.atan2 (b, c) / Math.PI) * 180;
         frontLeftAngle = (Math.atan2 (b, d) / Math.PI) * 180;
 
+        backRight.drive(normSpeeds[0], backRightAngle, false);
+        backLeft.drive(normSpeeds[1], backLeftAngle, false);
+        frontRight.drive(normSpeeds[2], frontRightAngle, false);
+        frontLeft.drive(normSpeeds[3], frontLeftAngle, false);
+
         // Publish Telemetry for now
-        telemetryPublisher.publishTelemetry("Back Right Speed", normSpeeds[0]);
+        telemetryPublisher.publishTelemetry("Back Right Speed", normSpeeds[0]); // Test Wheel
         telemetryPublisher.publishTelemetry("Back Left Speed", normSpeeds[1]);
         telemetryPublisher.publishTelemetry("Front Right Speed", normSpeeds[2]);
         telemetryPublisher.publishTelemetry("Front Left Speed", normSpeeds[3]);
 
-        telemetryPublisher.publishTelemetry("Back Right Angle", backRightAngle);
+        telemetryPublisher.publishTelemetry("Back Right Angle", backRightAngle); // Test Wheel
         telemetryPublisher.publishTelemetry("Back Left Angle", backLeftAngle);
         telemetryPublisher.publishTelemetry("Front Right Angle", frontRightAngle);
         telemetryPublisher.publishTelemetry("Front Left Angle", frontLeftAngle);

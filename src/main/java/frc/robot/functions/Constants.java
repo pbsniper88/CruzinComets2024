@@ -38,9 +38,13 @@ public final class Constants {
   public static final int kPIDLoopIdx = 0;
   public static final int kTimeoutMs = 30;
 
-  public static final double kP = 1;
-  public static final double kI = 0;
-  public static final double kD = 0;
+  public static final double kP = 0.2;
+  public static final double kI = 0.0;
+  public static final double kD = 0.1;
+  public static final double kF = 10.0;
+  public static final double kIz = 0.0;
+  public static final double kPeakOut = 1.0;
+  public static final int timeoutMs = 30;
   public static boolean isDriving = false;
   public static final double scalarSwerve = 0.08;
   public static final double deadZone = 0.15;
